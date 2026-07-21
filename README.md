@@ -61,8 +61,7 @@ def t90(Tin: float, scale: str):
         'HeBS' (or 'BS' or 'He39' or '39He'): 1939 helium vapor pressure scale of Bleaney and Simon  
 
     Returns:  
-    ----------          
-    T90 : float  
+        T90 : float  
         Temperature on ITS-90 scale (K)  
 
 The file may also be run in command-line mode, with a syntax like  
