@@ -60,9 +60,9 @@ def t90(Tin: float, scale: str):
         'He24' (or '24He'): 1924 helium vapor pressure scale of Verschaffelt and Kamerlingh Onnes & Weber (Leiden)  
         'HeBS' (or 'BS' or 'He39' or '39He'): 1939 helium vapor pressure scale of Bleaney and Simon  
  
-    Returns:  
-        T90 : float  
-        Temperature on ITS-90 scale (K)  
+Returns:  
+   T90 : float  
+   Temperature on ITS-90 scale (K)  
 
 The file may also be run in command-line mode, with a syntax like  
 python ITS90.py (-flags)  
