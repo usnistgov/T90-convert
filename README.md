@@ -5,6 +5,10 @@ The conversion procedures are documented in the paper: A.H. Harvey, "Conversion 
 
 The content consists of the main Python file, ITS90.py, and a test file that can be run with pytest, test_ITS90.py.
 
+## Dependencies  
+
+This code requires the NumPy and SciPy Python libraries.
+
 # File Documentation
 
 ## ITS90.py
