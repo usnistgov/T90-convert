@@ -431,7 +431,7 @@ def t68_from_48(T48):
             diff = 5.56e-4*T_new + 3.84e-7*(1-np.exp(-22135/T_new))*T_new**2
             T_old = T_new
             T_new = T48 + diff
-            if abs(T_new - T_old) < 1e-9:
+            if abs(T_new - T_old) < 1e-11:
                 return T_new
 
 def w68(T68):
@@ -468,7 +468,7 @@ def w68(T68):
     Tlow = 90.0
     wlow = 0.24298315
     
-    # Maximum iterations to prevent infinite loops (safety measure)
+    # Maximum iterations to prevent infinite loops
     for _ in range(1000):
         # Linear interpolation to find the next W candidate
         delt = Thigh - Tlow
@@ -488,7 +488,7 @@ def w68(T68):
         if abs(Tnew - T68) < 1.0e-12:
             return wnew
         
-        # Update boundaries (Bisection/False Position logic)
+        # Update boundaries
         if Tnew > T68:
             Thigh = Tnew
             whigh = wnew
@@ -1116,7 +1116,6 @@ def t90_from_L55(TL55):
     # as an intermediate. This produces a discontinuity of about 3 mK. 
         pL55 = p_L55(TL55) 
         T58 = t_He58(pL55)
-#        print(f"Calculated T58 from pL55: {T58:.6f} K")
         return t90_from_58(T58)
     
     elif TL55 <= T5:
@@ -2059,7 +2058,7 @@ def p_He90(T90):
             frac = (T90 - Tlow) / (Thigh - Tlow)
             lnp_new = lnplow + frac * (lnphigh - lnplow)
             p_new = np.exp(lnp_new)
-            if abs((p_new - p_old)/p_new) < 1e-9:
+            if abs((p_new - p_old)/p_new) < 1e-10:
                 return p_new
             else:
                 T_new = t_He90(p_new)
@@ -2151,7 +2150,6 @@ def p_3He90(T90):
     if T90 < 0.65 or T90 > 3.2:
         raise ValueError("T90 must be between 0.65 and 3.2 K.")
     else:
-# Below lambda point
         plow = 115.905619
         lnplow = np.log(plow)
         phigh = 101662.101  
@@ -2163,7 +2161,7 @@ def p_3He90(T90):
             frac = (T90 - Tlow) / (Thigh - Tlow)
             lnp_new = lnplow + frac * (lnphigh - lnplow)
             p_new = np.exp(lnp_new)
-            if abs((p_new - p_old)/p_new) < 1e-9:
+            if abs((p_new - p_old)/p_new) < 1e-10:
                 return p_new
             else:
                 T_new = t_3He90(p_new)
