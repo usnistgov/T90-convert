@@ -1,7 +1,7 @@
 # Description
 
 This repository contains Python code for converting temperatures reported on other scales (mostly obsolete historical scales) to the International Temperature Scale of 1990.  
-The conversion procedures are documented in the paper: A.H. Harvey, "Conversion of Reported Temperatures from Historical Scales to the ITS-90," _Int. J. Thermophys._, to be submitted (2026).  
+The conversion procedures are documented in the paper: A.H. Harvey, "Conversion of Reported Temperatures from Historical Scales to the ITS-90," _Int. J. Thermophys._, in press (2026).  
 
 The content consists of the main Python file, ITS90.py, and a test file that can be run with pytest, test_ITS90.py.
 
@@ -99,6 +99,6 @@ allan.harvey@nist.gov
 
 # Related Material
 
-A.H. Harvey, "Conversion of Reported Temperatures from Historical Scales to the ITS-90," _Int. J. Thermophys._, to be submitted (2026).  
+A.H. Harvey, "Conversion of Reported Temperatures from Historical Scales to the ITS-90," _Int. J. Thermophys._, in press (2026).  
 [DOI link to be added after publication]
 
