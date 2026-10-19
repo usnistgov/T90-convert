@@ -139,7 +139,7 @@ def test_t90_conversion_500():
     tolerance = 5e-7
     Scales_500 = ['IPTS-68','NBS68','ITS-48','ITS-27','Michels',
                  'KOL','GL']
-    Diffs_500 = [-40.441,-40.441,12.786,12.786,12.786,5.771,25.933]
+    Diffs_500 = [-40.441,-40.441,12.786,12.786,12.786,5.961,25.944]
     for Scale, Diff in zip(Scales_500, Diffs_500):
         expected_diff = 1.e-3*Diff
         result = t90(Tin,Scale)

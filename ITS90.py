@@ -966,7 +966,7 @@ def t90_from_KOL(TKOL):
     """
     if 63.15 <= TKOL <= 717.714:
         TKOL_points = np.array([63.15, 77.357, 90.161, 273.144, 373.144, 717.714])
-        diff_points = np.array([0.001, -0.005, 0.036, 0.006, -0.02, 0.05])
+        diff_points = np.array([0.001, -0.005, 0.036, 0.006, -0.0197, 0.05])
         diff = np.interp(TKOL, TKOL_points, diff_points)
         return TKOL + diff
     else:
@@ -989,7 +989,7 @@ def t90_from_GL(TGL):
         TGL_points = np.array([273.15, 373.15, 505.05, 594.05, 692.55, 717.70,
                                 903.15, 1233.35, 1335.75, 1355.95, 
                                 1822.65, 2028.15])
-        diff_points = np.array([0.0, -0.026, 0.028, 0.169, 0.127, 0.064, 0.628,
+        diff_points = np.array([0.0, -0.0257, 0.028, 0.169, 0.127, 0.064, 0.628,
                                 1.58, 1.58, 1.82, 5.35, 13.15])
         diff = np.interp(TGL, TGL_points, diff_points)
         return TGL + diff
