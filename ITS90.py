@@ -964,6 +964,7 @@ def t90_from_KOL(TKOL):
     - TKOL: K (KOL lab scale)
     - Output: K (ITS-90)
     """
+    # 10/19/2026: Correct improperly rounded difference at water NBP
     if 63.15 <= TKOL <= 717.714:
         TKOL_points = np.array([63.15, 77.357, 90.161, 273.144, 373.144, 717.714])
         diff_points = np.array([0.001, -0.005, 0.036, 0.006, -0.0197, 0.05])
@@ -985,6 +986,7 @@ def t90_from_GL(TGL):
     - TGL: K (GL lab scale)
     - Output: K (ITS-90)
     """
+    # 10/19/2026: Correct improperly rounded difference at water NBP
     if 273.15 <= TGL <= 2028.15:
         TGL_points = np.array([273.15, 373.15, 505.05, 594.05, 692.55, 717.70,
                                 903.15, 1233.35, 1335.75, 1355.95, 
